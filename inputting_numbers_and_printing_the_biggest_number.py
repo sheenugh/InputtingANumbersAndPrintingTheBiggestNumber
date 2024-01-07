@@ -40,11 +40,21 @@ class Input_A_Number:
         
         
         # Headings and subheadings inside the frame
-        headings_welcoming_word = Label(frame_inquiry, text = "Welcome User!", font = ("Impact", 35, "bold"), fg = "#BF3EFF", bg = "#F0F8FF", justify = "center").place(x = 90, y = 30)
-        subheadings_instructions = Label(frame_inquiry, text = "From 1-10, input your desired number.", font = ("Goudy old style", 12, "bold"), fg = "black", bg = "#F0F8FF").place(x = 90, y = 100)
+        headings_welcoming_word = Label(frame_inquiry, text = "Welcome User!", font = ("Impact", 25, "bold"), fg = "#BF3EFF", bg = "#F0F8FF", justify = "center").place(x = 90, y = 30)
+        subheadings_instructions = Label(frame_inquiry, text = "From 1-10, input your desired number.", font = ("Goudy old style", 12, "bold"), fg = "black", bg = "#F0F8FF").place(x = 90, y = 80)
         
-        # Input a Number
-        user_fist_desired_number = Label(frame_inquiry, text = "Please input a number", font = ("Goudy old style", 12, "bold"), fg = "grey", bg = "#F0F8FF").place(x = 90, y = 140)
+        # User will input the 3 Numbers
+        user_fist_desired_number = Label(frame_inquiry, text = "Please input a number", font = ("Goudy old style", 12, "bold"), fg = "grey", bg = "#F0F8FF").place(x = 90, y = 110)
+        self.user_inputting_the_first_number = Entry(frame_inquiry, font = ("Goudy old style", 12), bg = "#F0F8FF")
+        self.user_inputting_the_first_number.place(x = 90, y = 140, width = 320, height = 35) 
+        
+        user_second_desired_number = Label(frame_inquiry, text = "Please input a number", font = ("Goudy old style", 12, "bold"), fg = "grey", bg = "#F0F8FF").place(x = 90, y = 170)
+        self.user_inputting_the_second_number = Entry(frame_inquiry, font = ("Goudy old style", 12), bg = "#F0F8FF")
+        self.user_inputting_the_second_number.place(x = 90, y = 210, width = 200, height = 35)
+        
+        user_third_desired_number = Label(frame_inquiry, text = "Please input a number", font = ("Goudy old style", 12, "bold"), fg = "grey", bg = "#F0F8FF").place(x = 90, y = 230)
+        self.user_inputting_the_third_number = Entry(frame_inquiry, font = ("Goudy old style", 12), bg = "#F0F8FF")
+        self.user_inputting_the_third_number.place(x = 90, y = 280, width = 260, height = 35)
         
         
 root = Tk()
