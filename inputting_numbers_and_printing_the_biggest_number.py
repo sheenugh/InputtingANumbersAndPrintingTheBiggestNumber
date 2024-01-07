@@ -23,7 +23,7 @@ class Input_A_Number:
         self.root.geometry("1199x600+100+50")
         
         #Background image of the window
-        self.bg = PhotoImage(file="bg_for_window.png")
+        self.bg = ImageTk.PhotoImage(file="bg_for_window.jpg")
         self.bg_image = Label(self.root, image = self.bg).place(x = 0, y = 0, relwidth= 1, relheight = 1) 
         
 root = Tk()
