@@ -24,6 +24,3 @@ if __name__ == "__main__":
     root.mainloop()
     
     
-    frame_inquiry = Frame(self.root, bg = "#F0F8FF", highlightbackground = "#DCDCDC", highlightcolor = "#DCDCDC", highlightthickness = 3, bd = 0)
-        frame_inquiry.pack(padx = 20, pady = 20)
-        frame_inquiry.place(x = 330, y = 150, width = 500, height = 400)
