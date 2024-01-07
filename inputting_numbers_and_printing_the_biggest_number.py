@@ -43,6 +43,9 @@ class Input_A_Number:
         headings_welcoming_word = Label(frame_inquiry, text = "Welcome User!", font = ("Impact", 35, "bold"), fg = "#BF3EFF", bg = "#F0F8FF", justify = "center").place(x = 90, y = 30)
         subheadings_instructions = Label(frame_inquiry, text = "From 1-10, input your desired number.", font = ("Goudy old style", 12, "bold"), fg = "black", bg = "#F0F8FF").place(x = 90, y = 100)
         
+        # Input a Number
+        user_fist_desired_number = Label(frame_inquiry, text = "Please input a number", font = ("Goudy old style", 12, "bold"), fg = "grey", bg = "#F0F8FF").place(x = 90, y = 140)
+        
         
 root = Tk()
 root.title("Transparent Window")
