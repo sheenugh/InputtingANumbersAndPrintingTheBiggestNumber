@@ -21,6 +21,7 @@ class Input_A_Number:
         self.root = root
         self.root.title = ("Inputting_Random_Numbers")
         self.root.geometry("1199x600+100+50")
+        self.root.resizable(False, False)
         
         #Background image of the window
         self.bg = ImageTk.PhotoImage(file="bg_for_window.jpg")
