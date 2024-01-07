@@ -17,8 +17,10 @@ from tkinter import *
 # - Tkinter codes window
 class Input_A_Number:
     def __init__(self, root):
-        pass
-
+        self.root = root
+        self.root.title = ("Inputting_Random_Numbers")
+        self.root.geometry("1199x600+100+50")
+        
 root = Tk()
 obj = Input_A_Number(root)
 root.mainloop()
