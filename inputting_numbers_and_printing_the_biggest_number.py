@@ -64,7 +64,7 @@ class Input_A_Number:
         def check_function(self):
                 if self.user_inputting_the_first_number.get()=="" or  self.user_inputting_the_second_number.get()=="" or  self.user_inputting_the_third_number.get()=="":
                         messagebox.showerror("Error", "All fields are required to fill out", parent = self.root)        
-                elif self.user_inputting_the_first_number.get()!="sheena" or  self.user_inputting_the_second_number.get()!="mae" or  self.user_inputting_the_third_number.get()!="delima":
+                elif self.user_inputting_the_first_number.get()!="Sheena" or  self.user_inputting_the_second_number.get()!="Mae" or  self.user_inputting_the_third_number.get()!="Delima":
                         messagebox.showerror("Error", "Invalid", parent = self.root)
                 else:
                         messagebox.showinfo("Welcome", f"You have entered {self.user_inputting_the_first_number.get()}")
