@@ -56,6 +56,8 @@ class Input_A_Number:
         self.user_inputting_the_third_number = Entry(frame_inquiry, font = ("Goudy old style", 12), bg = "#F0F8FF", highlightbackground = "#C1CDCD", highlightcolor = "#838B8B", highlightthickness = 3, bd = 0)
         self.user_inputting_the_third_number.place(x = 90, y = 290, width = 320, height = 35)
         
+        # Button of the Submit 
+        
         
 root = Tk()
 root.title("Transparent Window")
