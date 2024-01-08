@@ -57,6 +57,7 @@ class Input_A_Number:
         self.user_inputting_the_third_number.place(x = 90, y = 290, width = 320, height = 35)
         
         # Button of the Submit 
+        submit_button = Button(frame_inquiry, text = "Submit", font = ("Goudy old sty", 15), fg = "white", bg = "#6162FF", bd = 0).place(x = 90, y = 340)
         
         
 root = Tk()
