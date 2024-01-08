@@ -36,25 +36,25 @@ class Input_A_Number:
         # A frame that the user will input a number
         frame_inquiry = Frame(self.root, bg = "#F0F8FF", highlightbackground ="#DCDCDC" , highlightcolor = "#DCDCDC", highlightthickness = 3, bd = 0)
         frame_inquiry.pack(padx = 20, pady = 20)
-        frame_inquiry.place(x = 330, y = 150, width = 500, height = 400)
+        frame_inquiry.place(x = 330, y = 100, width = 500, height = 420)
         
         
         # Headings and subheadings inside the frame
         headings_welcoming_word = Label(frame_inquiry, text = "Welcome User!", font = ("Impact", 25, "bold"), fg = "#BF3EFF", bg = "#F0F8FF", justify = "center").place(x = 90, y = 30)
-        subheadings_instructions = Label(frame_inquiry, text = "From 1-10, input your desired number.", font = ("Goudy old style", 12, "bold"), fg = "black", bg = "#F0F8FF").place(x = 90, y = 80)
+        subheadings_instructions = Label(frame_inquiry, text = "From 1-10, input your desired number.", font = ("Georgia", 12), fg = "black", bg = "#F0F8FF").place(x = 90, y = 80)
         
         # User will input the 3 Numbers
-        user_fist_desired_number = Label(frame_inquiry, text = "Please input a number", font = ("Goudy old style", 12, "bold"), fg = "grey", bg = "#F0F8FF").place(x = 90, y = 110)
-        self.user_inputting_the_first_number = Entry(frame_inquiry, font = ("Goudy old style", 12), bg = "#F0F8FF")
-        self.user_inputting_the_first_number.place(x = 90, y = 140, width = 320, height = 35) 
+        user_fist_desired_number = Label(frame_inquiry, text = "Input a number", font = ("Goudy old style", 12, "bold"), fg = "black", bg = "#F0F8FF").place(x = 90, y = 120)
+        self.user_inputting_the_first_number = Entry(frame_inquiry, font = ("Goudy old style", 12), bg = "#F0F8FF", highlightbackground = "#C1CDCD", highlightcolor = "#838B8B", highlightthickness = 3, bd = 0)
+        self.user_inputting_the_first_number.place(x = 90, y = 150, width = 320, height = 35) 
         
-        user_second_desired_number = Label(frame_inquiry, text = "Please input a number", font = ("Goudy old style", 12, "bold"), fg = "grey", bg = "#F0F8FF").place(x = 90, y = 170)
-        self.user_inputting_the_second_number = Entry(frame_inquiry, font = ("Goudy old style", 12), bg = "#F0F8FF")
-        self.user_inputting_the_second_number.place(x = 90, y = 210, width = 200, height = 35)
+        user_second_desired_number = Label(frame_inquiry, text = "Input a number", font = ("Goudy old style", 12, "bold"), fg = "black", bg = "#F0F8FF").place(x = 90, y = 190)
+        self.user_inputting_the_second_number = Entry(frame_inquiry, font = ("Goudy old style", 12), bg = "#F0F8FF", highlightbackground = "#C1CDCD", highlightcolor = "#838B8B", highlightthickness = 3, bd = 0)
+        self.user_inputting_the_second_number.place(x = 90, y = 220, width = 320, height = 35)
         
-        user_third_desired_number = Label(frame_inquiry, text = "Please input a number", font = ("Goudy old style", 12, "bold"), fg = "grey", bg = "#F0F8FF").place(x = 90, y = 230)
-        self.user_inputting_the_third_number = Entry(frame_inquiry, font = ("Goudy old style", 12), bg = "#F0F8FF")
-        self.user_inputting_the_third_number.place(x = 90, y = 280, width = 260, height = 35)
+        user_third_desired_number = Label(frame_inquiry, text = "Input a number", font = ("Goudy old style", 12, "bold"), fg = "black", bg = "#F0F8FF").place(x = 90, y = 260)
+        self.user_inputting_the_third_number = Entry(frame_inquiry, font = ("Goudy old style", 12), bg = "#F0F8FF", highlightbackground = "#C1CDCD", highlightcolor = "#838B8B", highlightthickness = 3, bd = 0)
+        self.user_inputting_the_third_number.place(x = 90, y = 290, width = 320, height = 35)
         
         
 root = Tk()
