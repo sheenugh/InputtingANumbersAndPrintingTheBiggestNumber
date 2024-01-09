@@ -27,10 +27,10 @@ pygame.time.delay(10)
 # ========== ACTUAL CODES =========
 # --- Pseudocode ---
 # - Tkinter codes window
-class Input_A_Number:
+class Finding_the_Greatest_Number:
         def __init__(self, root):
                 self.root = root
-                self.root.title = ("Inputting_Random_Numbers")
+                self.root.title = ("Inputting_Random_Numbers_and_Determine_the_Biggest_Number")
                 self.root.geometry("1199x600+100+50")
                 self.root.resizable(False, False)
         
@@ -62,7 +62,7 @@ class Input_A_Number:
                 self.user_inputting_the_third_number.place(x = 90, y = 290, width = 320, height = 35)
                 
                 # Button of the Submit
-                submit_button = Button(frame_inquiry, cursor = "hand2", text = "Submit", font = ("Goudy old sty", 15), fg = "white", bg = "#6495ED", bd = 0, command=self.inputting_numbers).place(x = 90, y = 340, width = 100, height = 40)
+                submit_button = Button(frame_inquiry, cursor = "hand2", text = "Submit", font = ("Goudy old sty", 15), fg = "white", bg = "#6162FF", bd = 0, command=self.inputting_numbers).place(x = 90, y = 340, width = 100, height = 40)
 
 # - Find and print the biggest number
         # def and if,else,elif function
@@ -87,7 +87,7 @@ class Input_A_Number:
                         messagebox.showinfo("Result", "All/Some numbers are equal.")
 
 root = Tk()
-root.title("Finding the Greater Number Among the 3 Numbers")
-obj = Input_A_Number(root)
+root.title("Finding the Greatest Number Among the 3 Inputted Numbers")
+obj = Finding_the_Greatest_Number(root)
 root.mainloop()
 
