@@ -65,7 +65,7 @@ class Input_A_Number:
                 except ValueError:
                         messagebox.showerror("Error", "Invalid input. Please enter valid integers.")
                 else:
-                        messagebox.showinfo("Welcome", f"You have entered {first_number}, {second_number}, {third_number} \n Would you like " )
+                        messagebox.showinfo("Welcome", f"You have entered {first_number}, {second_number}, {third_number} \n Do you want to know the biggest number you have entered? \n Click 'OK' if Yes. Click the 'Exit Tab' if No.")
                         
         
 root = Tk()
