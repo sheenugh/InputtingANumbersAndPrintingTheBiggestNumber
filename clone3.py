@@ -59,16 +59,17 @@ class Input_A_Number:
                 # Button of the Submit
                 submit_button = Button(frame_inquiry, cursor = "hand2", text = "Submit", font = ("Goudy old sty", 15), fg = "white", bg = "#6162FF", bd = 0, command=self.check_function).place(x = 90, y = 340, width = 180, height = 40)
         
-        numbers_1 = 1,2,3,4,5,6,7,8,9,10
         # def and if-else function
         def check_function(self):
                 if self.user_inputting_the_first_number.get()=="" or  self.user_inputting_the_second_number.get()=="" or  self.user_inputting_the_third_number.get()=="":
-                        messagebox.showerror("Error", "All fields are required to fill out", parent = self.root) 
-                if self.user_inputting_the_first_number.get() == str() or  self.user_inputting_the_second_number.get()== str() or  self.user_inputting_the_third_number.get() == str():
-                        messagebox.showerror("Error", "tanga", parent = self.root) 
+                    messagebox.showerror("Error", "All fields are required to fill out", parent = self.root)   
+                
+                if type(self.user_inputting_the_first_number.get()) == int or type(self.user_inputting_the_second_number.get()) == int or type(self.user_inputting_the_third_number.get()) == int
+                messagebox.showinfo("Welcome", f"You have entered {self.user_inputting_the_first_number.get(),self.user_inputting_the_second_number.get(),self.user_inputting_the_third_number.get()}")  
+                
                 else:
-                        self.user_inputting_the_first_number.get()== int() or  self.user_inputting_the_second_number.get()== int() or  self.user_inputting_the_third_number.get() == int()
-                        messagebox.showinfo("Welcome", f"You have entered {self.user_inputting_the_first_number.get(), self.user_inputting_the_second_number.get(), self.user_inputting_the_third_number.get()}")
+                type(self.user_inputting_the_first_number.get()) == int or type(self.user_inputting_the_second_number.get()) == int or type(self.user_inputting_the_third_number.get()) == int
+                messagebox.showerror("Error", "tangina", parent = self.root)
 
 root = Tk()
 root.title("Finding the Greater Number Among the 3 Numbers")
@@ -76,25 +77,3 @@ obj = Input_A_Number(root)
 root.mainloop()
 
 
-
-
-# - Find and print the biggest number
-''
-
-                
-                # if first_number=="" or second_number=="" or third_number=="":
-                #         messagebox.showerror("Error", "All fields are required to fill out", parent = self.root)  
-                
-                # if self.user_inputting_the_first_number.get()=="" or  self.user_inputting_the_second_number.get()=="" or  self.user_inputting_the_third_number.get()=="":
-                #         messagebox.showerror("Error", "All fields are required to fill out", parent = self.root) 
-                # if self.user_inputting_the_first_number.get()=="" or  self.user_inputting_the_second_number.get()=="" or  self.user_inputting_the_third_number.get()=="":
-                #         messagebox.showerror("Error", "All fields are required to fill out", parent = self.root)         
-                # if self.user_inputting_the_first_number.get()!= "1" or  self.user_inputting_the_second_number.get()!= "1" or  self.user_inputting_the_third_number.get()!= "1":
-                #         messagebox.showerror("Error", "Invalid", parent = self.root)
-                # else:
-                #         messagebox.showinfo("Welcome", f"You have entered {self.user_inputting_the_first_number.get(), self.user_inputting_the_second_number.get(), self.user_inputting_the_third_number.get()}")
-                        
-                # if self.user_inputting_the_first_number.get()!= "2" or  self.user_inputting_the_second_number.get()!= "2" or  self.user_inputting_the_third_number.get()!= "2":
-                #         messagebox.showerror("Error", "Invalid", parent = self.root)
-                # else:
-                #         messagebox.showinfo("Welcome", f"You have entered {self.user_inputting_the_first_number.get(), self.user_inputting_the_second_number.get(), self.user_inputting_the_third_number.get()}")

@@ -57,20 +57,32 @@ class Input_A_Number:
                 self.user_inputting_the_third_number.place(x = 90, y = 290, width = 320, height = 35)
                 
                 # Button of the Submit
-                submit_button = Button(frame_inquiry, text = "Submit", font = ("Goudy old sty", 15), fg = "white", bg = "#6162FF", bd = 0, command=self.check_function)
-                submit_button.place(x = 90, y = 340, width = 180, height = 40)
-        
+                submit_button = Button(frame_inquiry, cursor = "hand2", text = "Submit", font = ("Goudy old sty", 15), fg = "white", bg = "#6162FF", bd = 0, command=self.check_function).place(x = 90, y = 340, width = 180, height = 40)
+                
+                
+
         # def and if-else function
         def check_function(self):
                 if self.user_inputting_the_first_number.get()=="" or  self.user_inputting_the_second_number.get()=="" or  self.user_inputting_the_third_number.get()=="":
-                        messagebox.showerror("Error", "All fields are required to fill out", parent = self.root)        
-                elif self.user_inputting_the_first_number.get()!="Sheena" or  self.user_inputting_the_second_number.get()!="Mae" or  self.user_inputting_the_third_number.get()!="Delima":
-                        messagebox.showerror("Error", "Invalid", parent = self.root)
-                else:
-                        messagebox.showinfo("Welcome", f"You have entered {self.user_inputting_the_first_number.get()}")
+                                messagebox.showerror("Error", "All fields are required to fill out", parent = self.root)
                 
+                try:
+                        first_number = int(self.user_inputting_the_first_number.get())
+                        second_number = int(self.user_inputting_the_second_number.get())
+                        third_number = int(self.user_inputting_the_third_number.get()) 
+                        
+                
+                except ValueError:
+                        messagebox.showerror("Error", "Invalid input. Please enter valid integers.")
+                
+                
+                else:
+                        messagebox.showinfo("Welcome", f"You have entered {first_number}, {second_number}, {third_number}")
+  
+                        
+                        
 root = Tk()
-root.title("Transparent Window")
+root.title("Finding the Greater Number Among the 3 Numbers")
 obj = Input_A_Number(root)
 root.mainloop()
 
