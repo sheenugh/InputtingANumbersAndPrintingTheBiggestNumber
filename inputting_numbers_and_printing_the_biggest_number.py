@@ -65,7 +65,7 @@ class Input_A_Number:
                 submit_button = Button(frame_inquiry, cursor = "hand2", text = "Submit", font = ("Goudy old sty", 15), fg = "white", bg = "#6495ED", bd = 0, command=self.inputting_numbers).place(x = 90, y = 340, width = 100, height = 40)
 
 # - Find and print the biggest number
-        # def and if-else function
+        # def and if,else,elif function
         def inputting_numbers(self):
                 try:
                         first_number = int(self.user_inputting_the_first_number.get())
