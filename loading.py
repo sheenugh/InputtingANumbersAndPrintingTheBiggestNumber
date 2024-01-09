@@ -1,1 +1,0 @@
-x = (root.winfo_screenwidth()//2)-(width//2)
