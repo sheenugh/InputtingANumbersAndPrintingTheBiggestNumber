@@ -52,12 +52,13 @@ class Input_A_Number:
                 self.user_inputting_the_third_number.place(x = 90, y = 290, width = 320, height = 35)
                 
                 # Button of the Submit
-                submit_button = Button(frame_inquiry, cursor = "hand2", text = "Submit", font = ("Goudy old sty", 15), fg = "white", bg = "#6162FF", bd = 0, command=self.check_function).place(x = 90, y = 340, width = 180, height = 40)
-                
-                
+                submit_button = Button(frame_inquiry, cursor = "hand2", text = "Submit", font = ("Goudy old sty", 15), fg = "white", bg = "#6495ED", bd = 0, command=self.inputting_numbers).place(x = 90, y = 340, width = 100, height = 40)
+                #Continue Button
+                # continue_button = Button(frame_inquiry, cursor ="hand2", text = "Continue", font = ("Goudy old sty", 15), fg = "white", bg = "#6495ED", bd = 0, command = self.finding_the_biggest_number).place(x = 310, y = 340, width = 100, height = 40)
+
 
         # def and if-else function
-        def check_function(self):
+        def inputting_numbers(self):
                 try:
                         first_number = int(self.user_inputting_the_first_number.get())
                         second_number = int(self.user_inputting_the_second_number.get())
@@ -65,9 +66,23 @@ class Input_A_Number:
                 except ValueError:
                         messagebox.showerror("Error", "Invalid input. Please enter valid integers.")
                 else:
-                        messagebox.showinfo("Welcome", f"You have entered {first_number}, {second_number}, {third_number} \n Do you want to know the biggest number you have entered? \n Click 'OK' if Yes. Click the 'Exit Tab' if No.")
-                        
+                        messagebox.showinfo("Yahoo!", f"You have entered {first_number}, {second_number}, {third_number} \n Do you want to know the biggest number you have entered? \n Click 'OK' if Yes. Click the 'Exit Tab' if No.")
         
+                # Compare the values
+                if first_number > second_number and first_number > third_number:
+                        messagebox.showinfo("Result", f"The biggest number is: {first_number}")
+                elif second_number > first_number and second_number > third_number:
+                        messagebox.showinfo("Result", f"The biggest number is: {second_number}")
+                elif third_number > first_number and third_number > second_number:
+                        messagebox.showinfo("Result", f"The biggest number is: {third_number}")
+                else:
+                        messagebox.showinfo("Result", "All numbers are equal.")
+                        
+                
+        
+                
+
+
 root = Tk()
 root.title("Finding the Greater Number Among the 3 Numbers")
 obj = Input_A_Number(root)
