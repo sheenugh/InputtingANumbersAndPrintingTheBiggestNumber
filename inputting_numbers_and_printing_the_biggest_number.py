@@ -74,15 +74,15 @@ class Finding_the_Greatest_Number:
                 except ValueError:
                         messagebox.showerror("Error", "Invalid input. Please enter valid integers.")
                 else:
-                        messagebox.showinfo("Yahoo!", f"You have entered {first_number}, {second_number}, {third_number} \n Do you want to know the biggest number you have entered? \n Click 'OK' if Yes. Click the 'Exit Tab' if No.")
+                        messagebox.showinfo("Yahoo!", f"You have entered {first_number}, {second_number}, {third_number}. \n Do you want to know the biggest number you have entered? \n Click 'OK' if Yes. Click the 'Exit Tab' if No.")
         
                 # Compare the values
                 if first_number > second_number and first_number > third_number:
-                        messagebox.showinfo("Result", f"The biggest number is: {first_number}")
+                        messagebox.showinfo("Result", f"The biggest number is {first_number}.")
                 elif second_number > first_number and second_number > third_number:
-                        messagebox.showinfo("Result", f"The biggest number is: {second_number}")
+                        messagebox.showinfo("Result", f"The biggest number is {second_number}.")
                 elif third_number > first_number and third_number > second_number:
-                        messagebox.showinfo("Result", f"The biggest number is: {third_number}")
+                        messagebox.showinfo("Result", f"The biggest number is {third_number}.")
                 else:
                         messagebox.showinfo("Result", "All/Some numbers are equal.")
 
