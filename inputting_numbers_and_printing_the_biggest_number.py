@@ -14,11 +14,6 @@ from tkinter import messagebox
 
 
 
-# ========== FUNCTIONS ==========
-
-
-
-
 # ========== ACTUAL CODES =========
 # --- Pseudocode ---
 # - Tkinter codes window
@@ -42,7 +37,7 @@ class Input_A_Number:
                 
                 # # Headings and subheadings inside the frame
                 headings_welcoming_word = Label(frame_inquiry, text = "Welcome User!", font = ("Impact", 25, "bold"), fg = "#BF3EFF", bg = "#F0F8FF") .place(x = 90, y = 30)
-                subheadings_instructions = Label(frame_inquiry, text = "From 1-10, input your desired number.", font = ("Georgia", 12), fg = "black", bg = "#F0F8FF").place(x = 90, y = 80)
+                subheadings_instructions = Label(frame_inquiry, text = "Input any three number you like.", font = ("Georgia", 12), fg = "black", bg = "#F0F8FF").place(x = 90, y = 80)
                 
                 # User will input the 3 Numbers
                 user_fist_desired_number = Label(frame_inquiry, text = "Input a number", font = ("Goudy old style", 12, "bold"), fg = "black", bg = "#F0F8FF").place(x = 90, y = 120)
@@ -70,8 +65,9 @@ class Input_A_Number:
                 except ValueError:
                         messagebox.showerror("Error", "Invalid input. Please enter valid integers.")
                 else:
-                        messagebox.showinfo("Welcome", f"You have entered {first_number}, {second_number}, {third_number}")
- 
+                        messagebox.showinfo("Welcome", f"You have entered {first_number}, {second_number}, {third_number} \n Would you like " )
+                        
+        
 root = Tk()
 root.title("Finding the Greater Number Among the 3 Numbers")
 obj = Input_A_Number(root)
