@@ -4,14 +4,24 @@
 
 
 #---------------------------------------------
-
-
-
 # ========== IMPORTS ==========
 from tkinter import *
 from PIL import ImageTk
 from tkinter import messagebox
 
+import pygame
+import os
+
+# ========== MUST PROGRAM FIRST THE "FUNCTIONS" =========
+# - BG music
+def play_background_music(file_path):
+        pygame.mixer.init()
+        pygame.mixer.music.load(file_path)
+        pygame.mixer.music.play(-1)  
+        
+music_file_path = 'math_song.mp3'
+play_background_music(music_file_path)
+pygame.time.delay(10)  
 
 
 # ========== ACTUAL CODES =========
@@ -23,12 +33,12 @@ class Input_A_Number:
                 self.root.title = ("Inputting_Random_Numbers")
                 self.root.geometry("1199x600+100+50")
                 self.root.resizable(False, False)
-                
+        
                 # Background image of the window
                 self.bg = ImageTk.PhotoImage(file="bg_for_window.jpg")
                 self.bg_image = Label(self.root, image = self.bg).place(x = 0, y = 0, relwidth= 1, relheight = 1) 
                 
-                # - Ask user to input 3 numbers
+# - Ask user to input 3 numbers
                 # A frame that the user will input a number
                 frame_inquiry = Frame(self.root, bg = "#F0F8FF", highlightbackground ="#DCDCDC" , highlightcolor = "#DCDCDC", highlightthickness = 3, bd = 0)
                 frame_inquiry.pack(padx = 20, pady = 20)
@@ -37,8 +47,8 @@ class Input_A_Number:
                 
                 # # Headings and subheadings inside the frame
                 headings_welcoming_word = Label(frame_inquiry, text = "Welcome User!", font = ("Impact", 25, "bold"), fg = "#BF3EFF", bg = "#F0F8FF") .place(x = 90, y = 30)
-                subheadings_instructions = Label(frame_inquiry, text = "Input any three number you like.", font = ("Georgia", 12), fg = "black", bg = "#F0F8FF").place(x = 90, y = 80)
-                
+                subheadings_instructions = Label(frame_inquiry, text = "Input a unique number in each box.", font = ("Georgia", 12), fg = "black", bg = "#F0F8FF").place(x = 90, y = 80)
+        
                 # User will input the 3 Numbers
                 user_fist_desired_number = Label(frame_inquiry, text = "Input a number", font = ("Goudy old style", 12, "bold"), fg = "black", bg = "#F0F8FF").place(x = 90, y = 120)
                 self.user_inputting_the_first_number = Entry(frame_inquiry, font = ("Goudy old style", 12), bg = "#F0F8FF", highlightbackground = "#C1CDCD", highlightcolor = "#838B8B", highlightthickness = 3, bd = 0)
@@ -53,10 +63,8 @@ class Input_A_Number:
                 
                 # Button of the Submit
                 submit_button = Button(frame_inquiry, cursor = "hand2", text = "Submit", font = ("Goudy old sty", 15), fg = "white", bg = "#6495ED", bd = 0, command=self.inputting_numbers).place(x = 90, y = 340, width = 100, height = 40)
-                #Continue Button
-                # continue_button = Button(frame_inquiry, cursor ="hand2", text = "Continue", font = ("Goudy old sty", 15), fg = "white", bg = "#6495ED", bd = 0, command = self.finding_the_biggest_number).place(x = 310, y = 340, width = 100, height = 40)
 
-
+# - Find and print the biggest number
         # def and if-else function
         def inputting_numbers(self):
                 try:
@@ -76,20 +84,10 @@ class Input_A_Number:
                 elif third_number > first_number and third_number > second_number:
                         messagebox.showinfo("Result", f"The biggest number is: {third_number}")
                 else:
-                        messagebox.showinfo("Result", "All numbers are equal.")
-                        
-                
-        
-                
-
+                        messagebox.showinfo("Result", "All/Some numbers are equal.")
 
 root = Tk()
 root.title("Finding the Greater Number Among the 3 Numbers")
 obj = Input_A_Number(root)
 root.mainloop()
 
-
-
-
-# - Find and print the biggest number
-''
